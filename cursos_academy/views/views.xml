@@ -62,7 +62,7 @@
       <field name="name">cursos_academy.curso.view.tree list</field>
       <field name="model">cursos_academy.curso</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree string="Informacion General Curso">
           <field name="name"/>
           <field name="categoria"/>
           <field name="description"/>
@@ -72,34 +72,6 @@
       </field>
     </record>
 
-    
-
-  <record model="ir.ui.view" id="cursos_academy.curso_form_view">
-    <field name="name">cursos_academy.curso_form</field>
-    <field name="model">cursos_academy.curso</field>
-    <field name="arch" type="xml">
-        <form string="Formulario de Cursos">
-        <sheet>            
-                  <group >
-                      <separator string="Informacion de Curso" />
-                      <field name="name"/>
-                      <field name="categoria"/>
-                      <field name="duration"/>
-                  </group>
-
-                  <notebook colspan="4">
-                      <page string="Description">
-                          <field name="description" nolabel="1"/>
-                      </page>
-                      <page string="Precio">
-                          <field name="price" nolabel="1"/>
-                      </page>
-                  </notebook>
-
-            </sheet>
-          </form>
-    </field>
-  </record>
 
 
     <!--Vista de objeto maestro -->
@@ -166,4 +138,4 @@
       <menuitem name="Maestros" id="cursos_academy.maestro_menu" parent="cursos_academy.menu_root" action="cursos_academy.maestro_action_window"/>
 
   </data>
-</odoo>
+</odoo> 
